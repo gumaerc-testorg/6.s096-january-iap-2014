@@ -1,0 +1,9 @@
+---
+content_type: resource
+description: This is a resource file that contains information regarding lecture 8.
+file: /media/https%3A/open-learning-course-data-rc.s3.amazonaws.com/6-s096-effective-programming-in-c-and-c-january-iap-2014/a1bef9c1a97c611e8aacb38c42a874bd_MIT6_S096IAP14_Lecture8.pdf
+file_type: application/pdf
+resourcetype: Document
+title: 'Lecture 8: Project Environments'
+uid: a1bef9c1-a97c-611e-8aac-b38c42a874bd
+---
