@@ -1,6 +1,10 @@
 ---
 content_type: page
+learning_resource_types:
+- Assignments
+ocw_type: CourseSection
 parent_title: Assignments
+parent_type: CourseSection
 parent_uid: 1330c237-1da9-2343-e1c5-e39e429984f3
 title: Sample Solution to Assignment 2, Problem 3
 uid: fb10d3e3-5857-9aed-ab33-c91d72dd0770

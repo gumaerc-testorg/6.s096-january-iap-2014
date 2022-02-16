@@ -1,6 +1,10 @@
 ---
 content_type: page
+learning_resource_types:
+- Assignments
+ocw_type: CourseSection
 parent_title: Assignments
+parent_type: CourseSection
 parent_uid: 1330c237-1da9-2343-e1c5-e39e429984f3
 title: Sample Solution to Assignment 1, Problem 1
 uid: 078c6a84-ee88-3afe-34f2-c31a5dcd5d65
@@ -16,13 +20,13 @@ LANG: C
 
 \*/
 
-#include <stdio.h>
+#include \<stdio.h>
 
-#include <stdlib.h>
+#include \<stdlib.h>
 
-#include <stdint.h>
+#include \<stdint.h>
 
-#include <math.h>
+#include \<math.h>
 
 #define ABSOLUTE\_WIDTH 31
 
@@ -102,7 +106,7 @@ int main() {
 
  fscanf( input, "%zu", &N );
 
- for( size\_t i = 0; i < N; ++i ) {
+ for( size\_t i = 0; i \< N; ++i ) {
 
  fscanf( input, "%f", &f );
 

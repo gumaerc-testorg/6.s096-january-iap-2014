@@ -1,5 +1,7 @@
 ---
 content_type: page
+learning_resource_types: []
+ocw_type: CourseSection
 title: Getting Started
 uid: eb6ffd3a-5e1f-1bee-46d8-bbe89130fd37
 ---

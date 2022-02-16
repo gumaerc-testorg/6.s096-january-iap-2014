@@ -1,6 +1,10 @@
 ---
 content_type: page
+learning_resource_types:
+- Assignments
+ocw_type: CourseSection
 parent_title: Assignments
+parent_type: CourseSection
 parent_uid: 1330c237-1da9-2343-e1c5-e39e429984f3
 title: Sample Solution to Assignment 1, Problem 3
 uid: 91b98c31-93e8-a0ed-1427-bfc4b4f3bd48
@@ -16,9 +20,9 @@ LANG: C
 
 \*/
 
-#include <stdio.h>
+#include \<stdio.h>
 
-#include <stdlib.h>
+#include \<stdlib.h>
 
 #define MAXN 300
 
@@ -42,9 +46,9 @@ void read\_matrix( FILE \*fin, Matrix \*matrix ) {
 
  }
 
- for( size\_t r = 0; r < matrix->R; ++r ) {
+ for( size\_t r = 0; r \< matrix->R; ++r ) {
 
- for( size\_t c = 0; c < matrix->C; ++c ) {
+ for( size\_t c = 0; c \< matrix->C; ++c ) {
 
  fscanf( fin, "%d", &matrix->index\[r\]\[c\] );
 
@@ -58,9 +62,9 @@ void print\_matrix( FILE \*fout, Matrix \*matrix ) {
 
  fprintf( fout, "%zu %zu\\n", matrix->R, matrix->C );
 
- for( size\_t r = 0; r < matrix->R; ++r ) {
+ for( size\_t r = 0; r \< matrix->R; ++r ) {
 
- for( size\_t c = 0; c < matrix->C - 1; ++c ) {
+ for( size\_t c = 0; c \< matrix->C - 1; ++c ) {
 
  fprintf( fout, "%d ", matrix->index\[r\]\[c\] );
 
@@ -88,13 +92,13 @@ void mult\_matrix( Matrix \*a, Matrix \*b, Matrix \*prod ) {
 
  prod->C = b->C;
 
- for( size\_t r = 0; r < prod->R; ++r ) {
+ for( size\_t r = 0; r \< prod->R; ++r ) {
 
- for( size\_t c = 0; c < prod->C; ++c ) {
+ for( size\_t c = 0; c \< prod->C; ++c ) {
 
  prod->index\[r\]\[c\] = 0;
 
- for( size\_t i = 0; i < inner; ++i ) {
+ for( size\_t i = 0; i \< inner; ++i ) {
 
  prod->index\[r\]\[c\] += a->index\[r\]\[i\] \* b->index\[i\]\[c\];
 
