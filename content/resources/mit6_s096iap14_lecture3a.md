@@ -8,6 +8,7 @@ learning_resource_types:
 ocw_type: OCWFile
 parent_title: Lecture Notes
 parent_type: CourseSection
+parent_uid: 8f24f800-582b-70a7-fe91-288ef3b4a4a1
 resourcetype: Document
 title: 'Lecture 3: Assembly'
 uid: 86331fab-b0fb-9a8b-95b9-0e0d58eaf442

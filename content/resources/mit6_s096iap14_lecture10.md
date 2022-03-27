@@ -8,6 +8,7 @@ learning_resource_types:
 ocw_type: OCWFile
 parent_title: Lecture Notes
 parent_type: CourseSection
+parent_uid: 8f24f800-582b-70a7-fe91-288ef3b4a4a1
 resourcetype: Document
 title: 'Lecture 10: Course Recap, Interviews, Advanced Topics'
 uid: f7dab10f-096b-cfad-5841-d1960fee3ecb

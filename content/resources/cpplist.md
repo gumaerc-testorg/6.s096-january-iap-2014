@@ -9,6 +9,7 @@ learning_resource_types:
 ocw_type: OCWFile
 parent_title: Assignments
 parent_type: CourseSection
+parent_uid: 1330c237-1da9-2343-e1c5-e39e429984f3
 resourcetype: Other
 title: cpplist.zip
 uid: dba8ad5c-7057-b38c-2e93-6024bc2f2add

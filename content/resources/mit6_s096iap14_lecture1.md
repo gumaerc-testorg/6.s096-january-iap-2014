@@ -8,6 +8,7 @@ learning_resource_types:
 ocw_type: OCWFile
 parent_title: Lecture Notes
 parent_type: CourseSection
+parent_uid: 8f24f800-582b-70a7-fe91-288ef3b4a4a1
 resourcetype: Document
 title: 'Lecture 1: Introduction to C'
 uid: 443693ec-fb1c-c3e6-fe78-034a2ce179d0

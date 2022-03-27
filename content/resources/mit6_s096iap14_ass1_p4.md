@@ -8,6 +8,7 @@ learning_resource_types:
 ocw_type: OCWFile
 parent_title: Assignments
 parent_type: CourseSection
+parent_uid: 1330c237-1da9-2343-e1c5-e39e429984f3
 resourcetype: Document
 title: 'Assignment 1, Problem 4: Transposition Cipher'
 uid: b6540acf-ffa8-46db-e307-a191ad07cd81

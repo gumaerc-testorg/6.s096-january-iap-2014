@@ -8,6 +8,7 @@ learning_resource_types:
 ocw_type: OCWFile
 parent_title: Assignments
 parent_type: CourseSection
+parent_uid: 1330c237-1da9-2343-e1c5-e39e429984f3
 resourcetype: Other
 title: matrix.data.zip
 uid: 05219d18-9919-0bfe-23d4-8f4196722155

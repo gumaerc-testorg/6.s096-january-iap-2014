@@ -8,6 +8,7 @@ learning_resource_types:
 ocw_type: OCWFile
 parent_title: Assignments
 parent_type: CourseSection
+parent_uid: 1330c237-1da9-2343-e1c5-e39e429984f3
 resourcetype: Other
 title: nbody.zip
 uid: 72b2be8f-ed41-220e-18f1-66e3c4f7959f

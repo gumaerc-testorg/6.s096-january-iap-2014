@@ -14,8 +14,7 @@ uid: f5d748dc-6dd9-6a9a-ab7e-751a2cef2c0b
 The following are sample solutions to problems 8, 9, and 10 of the diagnostic test.
 
 ```
-
-/* Notes: as we will be doing in the class, diagnostic.c should be 
+ /* Notes: as we will be doing in the class, diagnostic.c should be 
 compiled with
  * "gcc -std=c99 -m64 -Wall -Wextra -Wshadow -Werror -pedantic"
  * (in particular: we are coding by the C99 standard)
@@ -146,7 +145,7 @@ void run_all_tests(void) {
 int main(void) {
   run_all_tests();
   return 0;
-}
+} 
 ```
 
 _Practices Illustrated_

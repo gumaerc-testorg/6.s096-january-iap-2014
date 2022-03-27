@@ -7,6 +7,7 @@ learning_resource_types: []
 ocw_type: OCWFile
 parent_title: Getting Started
 parent_type: CourseSection
+parent_uid: eb6ffd3a-5e1f-1bee-46d8-bbe89130fd37
 resourcetype: Document
 title: Diagnostic Test
 uid: 41753f29-d456-9368-11a6-6993bb892916

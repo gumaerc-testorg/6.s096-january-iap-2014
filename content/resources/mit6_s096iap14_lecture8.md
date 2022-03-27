@@ -8,6 +8,7 @@ learning_resource_types:
 ocw_type: OCWFile
 parent_title: Lecture Notes
 parent_type: CourseSection
+parent_uid: 8f24f800-582b-70a7-fe91-288ef3b4a4a1
 resourcetype: Document
 title: 'Lecture 8: Project Environments'
 uid: a1bef9c1-a97c-611e-8aac-b38c42a874bd

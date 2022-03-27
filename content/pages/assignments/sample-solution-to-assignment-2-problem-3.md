@@ -15,8 +15,7 @@ uid: fb10d3e3-5857-9aed-ab33-c91d72dd0770
 ### Here are the contents of **rational.h**:
 
 ```
-
-#ifndef _6S096_RATIONAL_H
+ #ifndef _6S096_RATIONAL_H
 #define _6S096_RATIONAL_H
  
 #include <cstdint>
@@ -79,14 +78,13 @@ public:
   explicit bad_rational() : std::domain_error("Bad rational: zero denominator" ) {}
 };
  
-#endif // _6S096_RATIONAL_H
+#endif // _6S096_RATIONAL_H 
 ```
 
 ### Here is the source code file **rational.cpp**:
 
 ```
-
-#include "rational.h"
+ #include "rational.h"
 #include "gcd.h"
  
 #include <stdexcept>
@@ -138,14 +136,13 @@ float Rational::to_float() const {
  
 double Rational::to_double()const {
   return static_cast<double>( _num ) / static_cast<double>( _den );
-}
+} 
 ```
 
 ### Below is the output using the test data:
 
 ```
-
-rational:
+ **rational:**
  1: OK [0.007 seconds] OK! add
  2: OK [0.006 seconds] OK! mult
  3: OK [0.009 seconds] OK! add1024
@@ -157,7 +154,7 @@ rational:
  9: OK [0.006 seconds] OK! (Bad rational: zero denominator)
 10: OK [0.006 seconds] OK! xyz
 11: OK [0.007 seconds] OK! pow2
-12: OK [0.006 seconds] OK! x1z
+12: OK [0.006 seconds] OK! x1z 
 ```
 
 « [Back to Assignments]({{< baseurl >}}/pages/assignments)

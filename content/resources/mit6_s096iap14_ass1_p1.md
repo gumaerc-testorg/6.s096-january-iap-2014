@@ -8,6 +8,7 @@ learning_resource_types:
 ocw_type: OCWFile
 parent_title: Assignments
 parent_type: CourseSection
+parent_uid: 1330c237-1da9-2343-e1c5-e39e429984f3
 resourcetype: Document
 title: 'Assignment 1, Problem 1: Floating Point'
 uid: 2512aaef-1790-6bb4-7312-b58fc84c19fb

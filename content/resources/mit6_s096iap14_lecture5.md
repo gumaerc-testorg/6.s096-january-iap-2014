@@ -8,6 +8,7 @@ learning_resource_types:
 ocw_type: OCWFile
 parent_title: Lecture Notes
 parent_type: CourseSection
+parent_uid: 8f24f800-582b-70a7-fe91-288ef3b4a4a1
 resourcetype: Document
 title: 'Lecture 5: Object-Oriented C++'
 uid: 8f524afc-3c98-ded0-e66a-5d4a4c45b30f

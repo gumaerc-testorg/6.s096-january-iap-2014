@@ -8,6 +8,7 @@ learning_resource_types:
 ocw_type: OCWFile
 parent_title: Assignments
 parent_type: CourseSection
+parent_uid: 1330c237-1da9-2343-e1c5-e39e429984f3
 resourcetype: Document
 title: 'Assignment 3, Problem 1: C++ Linked List Library'
 uid: 4bc8ac79-0488-c173-9ad3-994d8ccc8eaa

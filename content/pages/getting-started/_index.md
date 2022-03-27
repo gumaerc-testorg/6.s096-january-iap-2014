@@ -21,9 +21,11 @@ For learning purposes, students should use a consistent environment. Because stu
 
 Note that gcc/g++ should be at least version 4.7 or higher in order to use their more complete C++11 functionality. Everyone using these tools should also be using the following Makefile:
 
+```
  `CC := gcc
 CFLAGS := -O0 -g -std=c99 -Wall -Wextra -Wshadow -pedantic –Werror
 CXXFLAGS := -O0 -g -std=c++11 -Wall -Wextra -Wshadow -pedantic -Weffc++ -Werror ` 
+```
 
 Save the above code as "Makefile" in the directory where you are compiling your program.
 

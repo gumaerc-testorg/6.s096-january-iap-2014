@@ -8,6 +8,7 @@ learning_resource_types:
 ocw_type: OCWFile
 parent_title: Assignments
 parent_type: CourseSection
+parent_uid: 1330c237-1da9-2343-e1c5-e39e429984f3
 resourcetype: Document
 title: 'Assignment 2, Problem 2: Minimum Spanning Tree'
 uid: 19b653c0-ab4a-4fa9-f7d9-2955dd99e94c

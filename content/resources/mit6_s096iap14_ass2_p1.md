@@ -8,6 +8,7 @@ learning_resource_types:
 ocw_type: OCWFile
 parent_title: Assignments
 parent_type: CourseSection
+parent_uid: 1330c237-1da9-2343-e1c5-e39e429984f3
 resourcetype: Document
 title: 'Assignment 2, Problem 1: Linked List Library'
 uid: fea0e748-427d-ef38-6206-2ddc39c7f78a

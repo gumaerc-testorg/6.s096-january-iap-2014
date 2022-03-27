@@ -124,20 +124,36 @@ int main() {
 
 _Below is the output using the test data:_
 
+```
 **floating:**
+```
 
+```
  1: OK \[0.004 seconds\] OK!
+```
 
+```
  2: OK \[0.004 seconds\] OK!
+```
 
+```
  3: OK \[0.004 seconds\] OK!
+```
 
+```
  4: OK \[0.004 seconds\] OK!
+```
 
+```
  5: OK \[0.005 seconds\] OK!
+```
 
+```
  6: OK \[0.004 seconds\] OK!
+```
 
+```
  7: OK \[0.004 seconds\] OK!
+```
 
 ### « [Back to Assignments]({{< baseurl >}}/pages/assignments)

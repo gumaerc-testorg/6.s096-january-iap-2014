@@ -13,8 +13,7 @@ uid: ae77d4e8-f3c7-0ee1-c711-a61626adc449
 « [Back to Assignments]({{< baseurl >}}/pages/assignments)
 
 ```
-
-/*
+ /*
 PROG: mst
 LANG: C++
 */
@@ -108,14 +107,13 @@ int main() {
   }
    
   return 0;
-}
+} 
 ```
 
 ### Below is the output using the test data:
 
 ```
-
-mst:
+ **mst:**
  1: OK [0.004 seconds]
  2: OK [0.004 seconds]
  3: OK [0.004 seconds]
@@ -125,7 +123,7 @@ mst:
  7: OK [0.227 seconds]
  8: OK [0.229 seconds]
  9: OK [0.285 seconds]
-10: OK [0.287 seconds]
+10: OK [0.287 seconds] 
 ```
 
 « [Back to Assignments]({{< baseurl >}}/pages/assignments)

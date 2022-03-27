@@ -152,26 +152,48 @@ int main(void) {
 
 Below is the output using the test data:
 
+```
 **matrix:**
+```
 
+```
  1: OK \[0.004 seconds\]
+```
 
+```
  2: OK \[0.004 seconds\]
+```
 
+```
  3: OK \[0.004 seconds\]
+```
 
+```
  4: OK \[0.013 seconds\]
+```
 
+```
  5: OK \[0.009 seconds\]
+```
 
+```
  6: OK \[0.006 seconds\]
+```
 
+```
  7: OK \[0.011 seconds\]
+```
 
+```
  8: OK \[0.011 seconds\]
+```
 
+```
  9: OK \[0.012 seconds\]
+```
 
+```
 10: OK \[0.004 seconds\]
+```
 
 ### « [Back to Assignments]({{< baseurl >}}/pages/assignments)
