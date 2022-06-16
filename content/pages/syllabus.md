@@ -1,5 +1,7 @@
 ---
 content_type: page
+description: This syllabus section provides the course description and information
+  on meeting times, what the course is and is not, intended audience, and grading.
 learning_resource_types: []
 ocw_type: CourseSection
 title: Syllabus
@@ -35,8 +37,8 @@ This course is not an introductory programming class. You should have at least o
 
 The following scenarios may also be helpful:
 
-*   I've just taken [_6.01 Introduction to Electrical Engineering and Computer Science I_](/courses/6-01sc-introduction-to-electrical-engineering-and-computer-science-i-spring-2011/) or [_1.00 Introduction to Computers and Engineering Problem Solving_](/courses/1-00-introduction-to-computers-and-engineering-problem-solving-spring-2012/). **Yes, take the course!**
-*   I've taken [_6.004 Computation Structures_](/courses/6-004-computation-structures-spring-2009/) and _6.005 Elements of Software Construction_, and I've been programming in Java for a while. **Yes, take the course! The more programming experience you start with, the more you are likely to take away.**
+*   I've just taken [_6.01 Introduction to Electrical Engineering and Computer Science I_](/courses/6-01sc-introduction-to-electrical-engineering-and-computer-science-i-spring-2011) or [_1.00 Introduction to Computers and Engineering Problem Solving_](/courses/1-00-introduction-to-computers-and-engineering-problem-solving-spring-2012). **Yes, take the course!**
+*   I've taken [_6.004 Computation Structures_](/courses/6-004-computation-structures-spring-2009) and _6.005 Elements of Software Construction_, and I've been programming in Java for a while. **Yes, take the course! The more programming experience you start with, the more you are likely to take away.**
 *   I've only done web programming and I want to learn something new. **It depends on the sort of web programming you've done**.
 *   I've never taken a Course 6 subject or completed equivalent programming coursework before. **Probably not advisable.**
 *   I've been doing high school programming competitions for years and working in C/C++, but haven't really used the object-oriented features of C++ or worked on large programming projects. **Maybe. In fact, probably yes, take the course. About 50% of the course will involve features you most likely haven't been using much, and programming competitions don't always encourage the best coding practices (which this course will help you to correct).**
@@ -102,4 +104,4 @@ Assignment 4 (final project)
 
 {{< tableclose >}}
 
-For more information on the coding assignments and the requirements of the code reviews, refer to the [Assignments]({{< baseurl >}}/pages/assignments).
+For more information on the coding assignments and the requirements of the code reviews, refer to the {{% resource_link 1330c237-1da9-2343-e1c5-e39e429984f3 "Assignments" %}}.

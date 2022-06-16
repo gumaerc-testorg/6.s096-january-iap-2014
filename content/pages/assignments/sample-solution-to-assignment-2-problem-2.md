@@ -1,5 +1,6 @@
 ---
 content_type: page
+description: This section provides a sample solution to Assignment 2, Problem 2.
 learning_resource_types:
 - Assignments
 ocw_type: CourseSection
@@ -10,10 +11,11 @@ title: Sample Solution to Assignment 2, Problem 2
 uid: ae77d4e8-f3c7-0ee1-c711-a61626adc449
 ---
 
-« [Back to Assignments]({{< baseurl >}}/pages/assignments)
+« {{% resource_link 1330c237-1da9-2343-e1c5-e39e429984f3 "Back to Assignments" %}}
 
 ```
- /*
+
+/*
 PROG: mst
 LANG: C++
 */
@@ -107,13 +109,14 @@ int main() {
   }
    
   return 0;
-} 
+}
 ```
 
 ### Below is the output using the test data:
 
 ```
- **mst:**
+
+mst:
  1: OK [0.004 seconds]
  2: OK [0.004 seconds]
  3: OK [0.004 seconds]
@@ -123,7 +126,7 @@ int main() {
  7: OK [0.227 seconds]
  8: OK [0.229 seconds]
  9: OK [0.285 seconds]
-10: OK [0.287 seconds] 
+10: OK [0.287 seconds]
 ```
 
-« [Back to Assignments]({{< baseurl >}}/pages/assignments)
+« {{% resource_link 1330c237-1da9-2343-e1c5-e39e429984f3 "Back to Assignments" %}}

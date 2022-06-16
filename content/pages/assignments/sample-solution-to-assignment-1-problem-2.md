@@ -1,5 +1,6 @@
 ---
 content_type: page
+description: This section provides a sample solution to Assignment 1, Problem 2.
 learning_resource_types:
 - Assignments
 ocw_type: CourseSection
@@ -10,7 +11,7 @@ title: Sample Solution to Assignment 1, Problem 2
 uid: 61a02ed5-086c-d6b8-1a4b-fe6dac8a5beb
 ---
 
-« [Back to Assignments]({{< baseurl >}}/pages/assignments)
+« {{% resource_link 1330c237-1da9-2343-e1c5-e39e429984f3 "Back to Assignments" %}}
 
 /\*
 
@@ -124,41 +125,22 @@ int main() {
 
 Below is the output using the test data:
 
-```
 **floating:**
-```
 
-```
  1: OK \[0.004 seconds\] OK!
-```
 
-```
  2: OK \[0.004 seconds\] OK!
-```
 
-```
  3: OK \[0.004 seconds\] OK!
-```
 
-```
  4: OK \[0.004 seconds\] OK!
-```
 
-```
  5: OK \[0.005 seconds\] OK!
-```
 
-```
  6: OK \[0.004 seconds\] OK!
-```
 
-```
  7: OK \[0.004 seconds\] OK!
-```
 
-```
   
 
-```
-
-« [Back to Assignments]({{< baseurl >}}/pages/assignments)
+« {{% resource_link 1330c237-1da9-2343-e1c5-e39e429984f3 "Back to Assignments" %}}

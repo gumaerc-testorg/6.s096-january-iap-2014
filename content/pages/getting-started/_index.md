@@ -1,5 +1,7 @@
 ---
 content_type: page
+description: This section provides a diagnostic test taken by students prior to taking
+  the course and information on the recommended computing environment.
 learning_resource_types: []
 ocw_type: CourseSection
 title: Getting Started
@@ -9,7 +11,7 @@ uid: eb6ffd3a-5e1f-1bee-46d8-bbe89130fd37
 Course Diagnostic Test
 ----------------------
 
-Prior to taking the course, students were asked to complete a [diagnostic test (PDF)]({{< baseurl >}}/resources/mit6_s096iap14_diagnostic). [Sample solutions to the last three problems]({{< baseurl >}}/pages/getting-started/sample-solutions-to-diagnostic-test) were later provided to illustrate some of the best practices to be covered and followed during the course.
+Prior to taking the course, students were asked to complete a {{% resource_link 41753f29-d456-9368-11a6-6993bb892916 "diagnostic test (PDF)" %}}. {{% resource_link f5d748dc-6dd9-6a9a-ab7e-751a2cef2c0b "Sample solutions to the last three problems" %}} were later provided to illustrate some of the best practices to be covered and followed during the course.
 
 Recommended Computing Environment
 ---------------------------------
@@ -21,11 +23,9 @@ For learning purposes, students should use a consistent environment. Because stu
 
 Note that gcc/g++ should be at least version 4.7 or higher in order to use their more complete C++11 functionality. Everyone using these tools should also be using the following Makefile:
 
-```
  `CC := gcc
 CFLAGS := -O0 -g -std=c99 -Wall -Wextra -Wshadow -pedantic –Werror
 CXXFLAGS := -O0 -g -std=c++11 -Wall -Wextra -Wshadow -pedantic -Weffc++ -Werror ` 
-```
 
 Save the above code as "Makefile" in the directory where you are compiling your program.
 

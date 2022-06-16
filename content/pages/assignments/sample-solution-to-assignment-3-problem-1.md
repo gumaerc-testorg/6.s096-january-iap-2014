@@ -1,5 +1,6 @@
 ---
 content_type: page
+description: This section provides a sample solution to Assignment 3, Problem 1.
 learning_resource_types:
 - Assignments
 ocw_type: CourseSection
@@ -10,15 +11,16 @@ title: Sample Solution to Assignment 3, Problem 1
 uid: 33a86bc1-36fc-8c4c-bb4e-caaff3719422
 ---
 
-« [Back to Assignments]({{< baseurl >}}/pages/assignments)
+« {{% resource_link 1330c237-1da9-2343-e1c5-e39e429984f3 "Back to Assignments" %}}
 
 Look in `list.h` for a sense of the structure of the solution. The big idea to speed up the reduce/apply functions while also giving users a nice way to iterate over the items in the list is to create an "iterator" type within our class. Users will be able to write code similar to the STL:
 
 ```
- // Print out every item in the list
+
+// Print out every item in the list
 for( List::iterator it = list.begin(); it != list.end(); ++it ) {
     std::cout < < *it << "\n";
-} 
+}
 ```
 
 To speed up our "append" function, the List class will also store a pointer to the very last element in the current list.
@@ -43,7 +45,8 @@ Directory structure:
 ### Here are the contents of **apply.h**:
 
 ```
- #ifndef _6S096_CPPLIST_APPLY_H
+
+#ifndef _6S096_CPPLIST_APPLY_H
 #define _6S096_CPPLIST_APPLY_H
 #include "list.h"
  
@@ -60,13 +63,14 @@ class SquareApply : public ApplyFunction {
   int function( int x ) const;
 };
  
-#endif // _6S096_CPPLIST_APPLY_H 
+#endif // _6S096_CPPLIST_APPLY_H
 ```
 
 ### Here are the contents of **list.h**:
 
 ```
- #ifndef _6S096_CPPLIST_H
+
+#ifndef _6S096_CPPLIST_H
 #define _6S096_CPPLIST_H
 #include <cstddef>
 #include <stdexcept>
@@ -145,13 +149,15 @@ public:
   explicit ListOutOfBounds() : std::range_error( "List index out of bounds" ) {}
 };
  
-#endif // _6S096_CPPLIST_H 
+#endif // _6S096_CPPLIST_H
+
 ```
 
 ### Here are the contents of **list\_node.h**:
 
 ```
- #ifndef _6S096_CPPLIST_NODE_H
+
+#ifndef _6S096_CPPLIST_NODE_H
 #define _6S096_CPPLIST_NODE_H
  
 class ListNode {
@@ -174,13 +180,14 @@ public:
   static ListNode* create( int theValue = 0 );
 };
  
-#endif // _6S096_CPPLIST_NODE_H 
+#endif // _6S096_CPPLIST_NODE_H
 ```
 
 ### Here are the contents of **reduce.h**:
 
 ```
- #ifndef _6S096_CPPLIST_REDUCE_H
+
+#ifndef _6S096_CPPLIST_REDUCE_H
 #define _6S096_CPPLIST_REDUCE_H
 #include "list.h"
  
@@ -211,13 +218,14 @@ public:
   int identity() const { return 1; }
 };
  
-#endif // _6S096_CPPLIST_REDUCE_H 
+#endif // _6S096_CPPLIST_REDUCE_H
 ```
 
 ### Here is the source code file **apply.cpp**:
 
 ```
- #include "list.h"
+
+#include "list.h"
 #include "apply.h"
  
 void ApplyFunction::apply( List &list ) const {
@@ -228,13 +236,14 @@ void ApplyFunction::apply( List &list ) const {
  
 int SquareApply::function( int x ) const {
   return x * x;
-} 
+}
 ```
 
 ### Here is the source code file **list.cpp**:
 
 ```
- #include "list.h"
+
+#include "list.h"
 #include "list_node.h"
 #include "apply.h"
 #include "reduce.h"
@@ -408,13 +417,14 @@ void List::clear() {
   _length = 0;
   _begin = nullptr;
   _back = nullptr;
-} 
+}
 ```
 
 ### Here is the source code file **list\_iterator.cpp**:
 
 ```
- #include "list.h"
+
+#include "list.h"
 #include "list_node.h"
  
 List::iterator::iterator( ListNode *theNode ) : _node{theNode} {}
@@ -433,13 +443,14 @@ List::const_iterator& List::const_iterator::operator++() {
 }
 const int& List::const_iterator::operator*() { return _node->value(); }
 bool List::const_iterator::operator==( const const_iterator &rhs ) { return _node == rhs._node; }
-bool List::const_iterator::operator!=( const const_iterator &rhs ) { return _node != rhs._node; } 
+bool List::const_iterator::operator!=( const const_iterator &rhs ) { return _node != rhs._node; }
 ```
 
 ### Here is the source code file **list\_node.cpp**:
 
 ```
- #include "list_node.h"
+
+#include "list_node.h"
  
 ListNode::ListNode() : _value{0}, _next{nullptr} {}
 ListNode::ListNode( int theValue ) : _value{theValue}, _next{nullptr} {}
@@ -474,13 +485,14 @@ void ListNode::deleteSection( ListNode *before, ListNode *after ) {
  
 ListNode* ListNode::create( int theValue ) {
   return new ListNode{ theValue };
-} 
+}
 ```
 
 ### Here is the source code file **reduce.cpp**:
 
 ```
- #include "list.h"
+
+#include "list.h"
 #include "reduce.h"
  
 int ReduceFunction::reduce(const List &list ) const {
@@ -497,13 +509,14 @@ int SumReduce::function( int x, int y ) const {
  
 int ProductReduce::function(int x, int y ) const { 
   return x * y; 
-} 
+}
 ```
 
 ### Below is the output using the test data:
 
 ```
- **cpplist:** 
+
+cpplist: 
  1: OK [0.004 seconds] OK!
  2: OK [0.005 seconds] OK!
  3: OK [0.005 seconds] OK!
@@ -513,7 +526,7 @@ int ProductReduce::function(int x, int y ) const {
  7: OK [0.053 seconds] OK!
  8: OK [0.007 seconds] OK!
  9: OK [0.005 seconds] OK!
-10: OK [0.742 seconds] OK! 
+10: OK [0.742 seconds] OK!
 ```
 
-« [Back to Assignments]({{< baseurl >}}/pages/assignments)
+« {{% resource_link 1330c237-1da9-2343-e1c5-e39e429984f3 "Back to Assignments" %}}

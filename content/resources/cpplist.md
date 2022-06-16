@@ -2,7 +2,7 @@
 content_type: resource
 description: This is a supporting file that contains information regarding C++ linked
   list library.
-file: /media/courses/6-s096-effective-programming-in-c-and-c-january-iap-2014/dba8ad5c7057b38c2e936024bc2f2add_cpplist.zip
+file: /courses/6-s096-effective-programming-in-c-and-c-january-iap-2014/dba8ad5c7057b38c2e936024bc2f2add_cpplist.zip
 file_type: application/zip
 learning_resource_types:
 - Assignments
@@ -14,3 +14,5 @@ resourcetype: Other
 title: cpplist.zip
 uid: dba8ad5c-7057-b38c-2e93-6024bc2f2add
 ---
+This is a supporting file that contains information regarding C++ linked list library.
+

@@ -1,5 +1,6 @@
 ---
 content_type: page
+description: This section provides a sample solution to Assignment 1, Problem 4.
 learning_resource_types:
 - Assignments
 ocw_type: CourseSection
@@ -10,7 +11,7 @@ title: Sample Solution to Assignment 1, Problem 4
 uid: 3ee3a458-8407-7c89-e496-6206ad4485eb
 ---
 
-« [Back to Assignments]({{< baseurl >}}/pages/assignments)
+« {{% resource_link 1330c237-1da9-2343-e1c5-e39e429984f3 "Back to Assignments" %}}
 
 /\*
 
@@ -212,52 +213,28 @@ int main(void) {
 
 Below is the output using the test data:
 
-```
 **matrix2:**
-```
 
-```
  1: OK \[0.006 seconds\]
-```
 
-```
  2: OK \[0.007 seconds\]
-```
 
-```
  3: OK \[0.007 seconds\]
-```
 
-```
  4: OK \[0.019 seconds\]
-```
 
-```
  5: OK \[0.017 seconds\]
-```
 
-```
  6: OK \[0.109 seconds\]
-```
 
-```
  7: OK \[0.178 seconds\]
-```
 
-```
  8: OK \[0.480 seconds\]
-```
 
-```
  9: OK \[0.791 seconds\]
-```
 
-```
 10: OK \[1.236 seconds\]
-```
 
-```
 11: OK \[2.088 seconds\]
-```
 
-### « [Back to Assignments]({{< baseurl >}}/pages/assignments)
+### « {{% resource_link 1330c237-1da9-2343-e1c5-e39e429984f3 "Back to Assignments" %}}

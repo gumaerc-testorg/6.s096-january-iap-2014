@@ -1,5 +1,6 @@
 ---
 content_type: page
+description: This section provides a sample solution to Assignment 2, Problem 1.
 learning_resource_types:
 - Assignments
 ocw_type: CourseSection
@@ -10,10 +11,11 @@ title: Sample Solution to Assignment 2, Problem 1
 uid: ddf34070-aefd-5de7-db48-bb07fc7f0546
 ---
 
-« [Back to Assignments]({{< baseurl >}}/pages/assignments)
+« {{% resource_link 1330c237-1da9-2343-e1c5-e39e429984f3 "Back to Assignments" %}}
 
 ```
- #include <"list.h">
+
+#include <"list.h">
  
 #include <stdio.h>
 #include <stdlib.h>
@@ -156,13 +158,14 @@ void list_clear( List *list ) {
     printf( "Error: failed to clean up list properly.\n" );
     exit( EXIT_FAILURE );
   }
-} 
+}
 ```
 
 ### Below is the output using the test data:
 
 ```
- **list:**
+
+list:
  1: OK [0.002 seconds] OK!
  2: OK [0.004 seconds] OK!
  3: OK [0.035 seconds] OK!
@@ -172,7 +175,7 @@ void list_clear( List *list ) {
  7: OK [0.061 seconds] OK!
  8: OK [0.213 seconds] OK!
  9: OK [0.002 seconds] OK!
-10: OK [1.054 seconds] OK! 
+10: OK [1.054 seconds] OK!
 ```
 
-« [Back to Assignments]({{< baseurl >}}/pages/assignments)
+« {{% resource_link 1330c237-1da9-2343-e1c5-e39e429984f3 "Back to Assignments" %}}
