@@ -5,6 +5,7 @@ file: /courses/6-s096-effective-programming-in-c-and-c-january-iap-2014/a2faff7d
 file_type: application/pdf
 learning_resource_types:
 - Assignments
+license: https://creativecommons.org/licenses/by-nc-sa/4.0/
 ocw_type: OCWFile
 parent_title: Assignments
 parent_type: CourseSection
@@ -14,4 +15,3 @@ title: 'Assignment 2, Problem 3: Rational Number Library'
 uid: a2faff7d-d316-a65a-08d4-93dd6514203b
 ---
 This resource file contains information regarding rational number library.
-

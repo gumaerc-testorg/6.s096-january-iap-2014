@@ -6,6 +6,7 @@ file: /courses/6-s096-effective-programming-in-c-and-c-january-iap-2014/cda27b4b
 file_type: application/pdf
 learning_resource_types:
 - Assignments
+license: https://creativecommons.org/licenses/by-nc-sa/4.0/
 ocw_type: OCWFile
 parent_title: Assignments
 parent_type: CourseSection
@@ -15,4 +16,3 @@ title: 'Assignment 1, Problem 3: Matrix Manipulation 2'
 uid: cda27b4b-add6-e569-bd0f-99cd69e341e7
 ---
 This resource file contains information regarding matrix manipulation 2.
-

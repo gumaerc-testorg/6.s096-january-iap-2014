@@ -5,6 +5,7 @@ file: /courses/6-s096-effective-programming-in-c-and-c-january-iap-2014/a67217a0
 file_type: application/zip
 learning_resource_types:
 - Lecture Notes
+license: https://creativecommons.org/licenses/by-nc-sa/4.0/
 ocw_type: OCWFile
 parent_title: Lecture Notes
 parent_type: CourseSection
@@ -14,4 +15,3 @@ title: lecture01-examples.zip
 uid: a67217a0-d0b0-d0e9-a627-542e1d7d6bbb
 ---
 This is a special file that contains information regarding lecture 1.
-

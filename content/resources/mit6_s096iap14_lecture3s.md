@@ -5,6 +5,7 @@ file: /courses/6-s096-effective-programming-in-c-and-c-january-iap-2014/df281b9b
 file_type: application/pdf
 learning_resource_types:
 - Lecture Notes
+license: https://creativecommons.org/licenses/by-nc-sa/4.0/
 ocw_type: OCWFile
 parent_title: Lecture Notes
 parent_type: CourseSection
@@ -14,4 +15,3 @@ title: 'Lecture 3: Secure Programming in C'
 uid: df281b9b-b8aa-5c43-7756-7454bb839676
 ---
 This is a resource file that contains information regarding lecture 3.
-

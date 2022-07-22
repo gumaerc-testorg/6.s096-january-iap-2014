@@ -5,6 +5,7 @@ file: /courses/6-s096-effective-programming-in-c-and-c-january-iap-2014/19b653c0
 file_type: application/pdf
 learning_resource_types:
 - Assignments
+license: https://creativecommons.org/licenses/by-nc-sa/4.0/
 ocw_type: OCWFile
 parent_title: Assignments
 parent_type: CourseSection
@@ -14,4 +15,3 @@ title: 'Assignment 2, Problem 2: Minimum Spanning Tree'
 uid: 19b653c0-ab4a-4fa9-f7d9-2955dd99e94c
 ---
 This resource file contains information regarding minimum spanning tree.
-

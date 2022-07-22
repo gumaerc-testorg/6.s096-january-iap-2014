@@ -5,6 +5,7 @@ file: /courses/6-s096-effective-programming-in-c-and-c-january-iap-2014/3f8f2bc5
 file_type: application/pdf
 learning_resource_types:
 - Lecture Notes
+license: https://creativecommons.org/licenses/by-nc-sa/4.0/
 ocw_type: OCWFile
 parent_title: Lecture Notes
 parent_type: CourseSection
@@ -14,4 +15,3 @@ title: 'Lecture 2: Subtleties of C'
 uid: 3f8f2bc5-d4ee-804b-3bce-651a210a940f
 ---
 This is a resource file that contains information regarding lecture 2.
-

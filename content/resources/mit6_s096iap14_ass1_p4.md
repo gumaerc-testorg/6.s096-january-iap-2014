@@ -5,6 +5,7 @@ file: /courses/6-s096-effective-programming-in-c-and-c-january-iap-2014/b6540acf
 file_type: application/pdf
 learning_resource_types:
 - Assignments
+license: https://creativecommons.org/licenses/by-nc-sa/4.0/
 ocw_type: OCWFile
 parent_title: Assignments
 parent_type: CourseSection
@@ -14,4 +15,3 @@ title: 'Assignment 1, Problem 4: Transposition Cipher'
 uid: b6540acf-ffa8-46db-e307-a191ad07cd81
 ---
 This resource file contains information regarding transposition cipher.
-
