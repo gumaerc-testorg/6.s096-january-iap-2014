@@ -1,12 +1,17 @@
 ---
 content_type: page
+description: This section provides a sample solution to Assignment 2, Problem 2.
+learning_resource_types:
+- Assignments
+ocw_type: CourseSection
 parent_title: Assignments
+parent_type: CourseSection
 parent_uid: 1330c237-1da9-2343-e1c5-e39e429984f3
 title: Sample Solution to Assignment 2, Problem 2
 uid: ae77d4e8-f3c7-0ee1-c711-a61626adc449
 ---
 
-« [Back to Assignments]({{< baseurl >}}/pages/assignments)
+« {{% resource_link 1330c237-1da9-2343-e1c5-e39e429984f3 "Back to Assignments" %}}
 
 ```
 
@@ -124,4 +129,4 @@ mst:
 10: OK [0.287 seconds]
 ```
 
-« [Back to Assignments]({{< baseurl >}}/pages/assignments)
+« {{% resource_link 1330c237-1da9-2343-e1c5-e39e429984f3 "Back to Assignments" %}}

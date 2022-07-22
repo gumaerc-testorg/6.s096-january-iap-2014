@@ -1,12 +1,17 @@
 ---
 content_type: page
+description: This section provides a sample solution to Assignment 1, Problem 2.
+learning_resource_types:
+- Assignments
+ocw_type: CourseSection
 parent_title: Assignments
+parent_type: CourseSection
 parent_uid: 1330c237-1da9-2343-e1c5-e39e429984f3
 title: Sample Solution to Assignment 1, Problem 2
 uid: 61a02ed5-086c-d6b8-1a4b-fe6dac8a5beb
 ---
 
-« [Back to Assignments]({{< baseurl >}}/pages/assignments)
+« {{% resource_link 1330c237-1da9-2343-e1c5-e39e429984f3 "Back to Assignments" %}}
 
 /\*
 
@@ -16,13 +21,13 @@ LANG: C
 
 \*/
 
-#include <stdio.h>
+#include \<stdio.h>
 
-#include <stdlib.h>
+#include \<stdlib.h>
 
-#include <stdint.h>
+#include \<stdint.h>
 
-#include <math.h>
+#include \<math.h>
 
 #define ABSOLUTE\_WIDTH 31
 
@@ -102,7 +107,7 @@ int main() {
 
  fscanf( input, "%zu", &N );
 
- for( size\_t i = 0; i < N; ++i ) {
+ for( size\_t i = 0; i \< N; ++i ) {
 
  fscanf( input, "%f", &f );
 
@@ -138,4 +143,4 @@ Below is the output using the test data:
 
   
 
-« [Back to Assignments]({{< baseurl >}}/pages/assignments)
+« {{% resource_link 1330c237-1da9-2343-e1c5-e39e429984f3 "Back to Assignments" %}}

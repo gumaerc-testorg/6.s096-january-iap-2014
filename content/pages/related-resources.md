@@ -1,5 +1,9 @@
 ---
 content_type: page
+description: This section provides references on C and C++ libraries, a list of recommended
+  texts, and other web references.
+learning_resource_types: []
+ocw_type: CourseSection
 title: Related Resources
 uid: 29fdeacf-14a2-c5d6-0122-eb660781031b
 ---

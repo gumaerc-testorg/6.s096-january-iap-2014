@@ -1,12 +1,17 @@
 ---
 content_type: page
+description: This section provides a sample solution to Assignment 3, Problem 1.
+learning_resource_types:
+- Assignments
+ocw_type: CourseSection
 parent_title: Assignments
+parent_type: CourseSection
 parent_uid: 1330c237-1da9-2343-e1c5-e39e429984f3
 title: Sample Solution to Assignment 3, Problem 1
 uid: 33a86bc1-36fc-8c4c-bb4e-caaff3719422
 ---
 
-« [Back to Assignments]({{< baseurl >}}/pages/assignments)
+« {{% resource_link 1330c237-1da9-2343-e1c5-e39e429984f3 "Back to Assignments" %}}
 
 Look in `list.h` for a sense of the structure of the solution. The big idea to speed up the reduce/apply functions while also giving users a nice way to iterate over the items in the list is to create an "iterator" type within our class. Users will be able to write code similar to the STL:
 
@@ -524,4 +529,4 @@ cpplist:
 10: OK [0.742 seconds] OK!
 ```
 
-« [Back to Assignments]({{< baseurl >}}/pages/assignments)
+« {{% resource_link 1330c237-1da9-2343-e1c5-e39e429984f3 "Back to Assignments" %}}

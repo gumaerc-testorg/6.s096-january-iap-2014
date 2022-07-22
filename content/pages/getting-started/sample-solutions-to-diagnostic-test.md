@@ -1,12 +1,17 @@
 ---
 content_type: page
+description: This section provides sample solutions to select problems from a diagnostic
+  test taken by students prior to taking the course.
+learning_resource_types: []
+ocw_type: CourseSection
 parent_title: Getting Started
+parent_type: CourseSection
 parent_uid: eb6ffd3a-5e1f-1bee-46d8-bbe89130fd37
 title: Sample Solutions to Diagnostic Test
 uid: f5d748dc-6dd9-6a9a-ab7e-751a2cef2c0b
 ---
 
-« [Back to Getting Started]({{< baseurl >}}/pages/getting-started)
+« {{% resource_link eb6ffd3a-5e1f-1bee-46d8-bbe89130fd37 "Back to Getting Started" %}}
 
 The following are sample solutions to problems 8, 9, and 10 of the diagnostic test.
 
@@ -156,4 +161,4 @@ _Practices Illustrated_
 *   Variable names are descriptive, but not more verbose than necessary.
 *   Each solution to a problem has a piece of code to test it.
 
-« [Back to Getting Started]({{< baseurl >}}/pages/getting-started)
+« {{% resource_link eb6ffd3a-5e1f-1bee-46d8-bbe89130fd37 "Back to Getting Started" %}}
