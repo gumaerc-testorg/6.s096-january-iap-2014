@@ -2,6 +2,7 @@
 content_type: resource
 description: ''
 file: /courses/6-s096-effective-programming-in-c-and-c-january-iap-2014/05219d1899190bfe23d48f4196722155_matrix.data.zip
+file_size: 281811
 file_type: application/zip
 learning_resource_types:
 - Assignments
