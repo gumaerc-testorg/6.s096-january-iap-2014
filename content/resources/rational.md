@@ -3,6 +3,7 @@ content_type: resource
 description: This is a supporting file that contains information regarding rational
   number library.
 file: /courses/6-s096-effective-programming-in-c-and-c-january-iap-2014/820782559c74bf80959427a78ac52cf0_rational.zip
+file_size: 3435
 file_type: application/zip
 learning_resource_types:
 - Assignments

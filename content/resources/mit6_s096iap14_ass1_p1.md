@@ -2,6 +2,7 @@
 content_type: resource
 description: This resource file contains information regarding floating point.
 file: /courses/6-s096-effective-programming-in-c-and-c-january-iap-2014/2512aaef17906bb47312b58fc84c19fb_MIT6_S096IAP14_ass1_p1.pdf
+file_size: 259560
 file_type: application/pdf
 learning_resource_types:
 - Assignments
