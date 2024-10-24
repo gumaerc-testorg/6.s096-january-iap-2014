@@ -2,7 +2,7 @@
 content_type: resource
 description: This is a supporting file that contains information regarding floating
   point.
-file: /courses/6-s096-effective-programming-in-c-and-c-january-iap-2014/bbdef2abed01b94a05a56b7504774ac3_floating.data.zip
+file: /ol-ocw-studio-app/courses/6-s096-effective-programming-in-c-and-c-january-iap-2014/bbdef2abed01b94a05a56b7504774ac3_floating.data.zip
 file_size: 18064
 file_type: application/zip
 learning_resource_types:
