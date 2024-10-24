@@ -2,7 +2,7 @@
 content_type: resource
 description: This is a supporting file that contains information regarding linked
   list library.
-file: /courses/6-s096-effective-programming-in-c-and-c-january-iap-2014/0449fc7236fc13ace2c3e93c96a93c02_list.zip
+file: /ol-ocw-studio-app/courses/6-s096-effective-programming-in-c-and-c-january-iap-2014/0449fc7236fc13ace2c3e93c96a93c02_list.zip
 file_size: 3375
 file_type: application/zip
 learning_resource_types:

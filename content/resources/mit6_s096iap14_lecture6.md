@@ -1,7 +1,7 @@
 ---
 content_type: resource
 description: This is a resource file that contains information regarding lecture 6.
-file: /courses/6-s096-effective-programming-in-c-and-c-january-iap-2014/a62a91ae256211755e4fcfe92109a496_MIT6_S096IAP14_Lecture6.pdf
+file: /ol-ocw-studio-app/courses/6-s096-effective-programming-in-c-and-c-january-iap-2014/a62a91ae256211755e4fcfe92109a496_MIT6_S096IAP14_Lecture6.pdf
 file_size: 312912
 file_type: application/pdf
 learning_resource_types:
