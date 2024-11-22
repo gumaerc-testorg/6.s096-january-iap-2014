@@ -1,240 +1,276 @@
 ---
 content_type: page
-description: This section provides a sample solution to Assignment 1, Problem 4.
+description: This section provides a sample solution to Assignment 1, Problem 3.
+draft: true
 learning_resource_types:
 - Assignments
 ocw_type: CourseSection
 parent_title: Assignments
 parent_type: CourseSection
 parent_uid: 1330c237-1da9-2343-e1c5-e39e429984f3
-title: Sample Solution to Assignment 1, Problem 4
+title: OLD
 uid: 3ee3a458-8407-7c89-e496-6206ad4485eb
 ---
+« {{% resource_link "1330c237-1da9-2343-e1c5-e39e429984f3" "Back to Assignments" %}}
 
-« {{% resource_link 1330c237-1da9-2343-e1c5-e39e429984f3 "Back to Assignments" %}}
-
-/\*
-
+```plaintext
+/*
 PROG: matrix2
 
 LANG: C
 
-\*/
+*/
 
-#include \<stdio.h>
+#include <stdio.h>
 
-#include \<stdlib.h>
+#include <stdlib.h>
 
-#include \<string.h>
+#include <string.h>
 
-typedef struct Matrix\_s {
+ 
 
- size\_t R, C;
+typedef struct Matrix_s {
 
- int \*index;
+  size_t R, C;
+
+  int *index;
 
 } Matrix;
 
-Matrix\* allocate\_matrix( size\_t R, size\_t C ) {
+ 
 
- Matrix \*matrix = malloc( sizeof( Matrix ) );
+Matrix* allocate_matrix( size_t R, size_t C ) {
 
- matrix->R = R;
+  Matrix *matrix = malloc( sizeof( Matrix ) );
 
- matrix->C = C;
+  matrix->R = R;
 
- matrix->index = malloc( R \* C \* sizeof( int ) );
+  matrix->C = C;
 
- return matrix;
+  matrix->index = malloc( R * C * sizeof( int ) );
+
+  return matrix;
+
+}
+
+ 
+
+void destroy_matrix( Matrix *matrix ) {
+
+  free( matrix->index );
+
+  free( matrix );
 
 }
 
-void destroy\_matrix( Matrix \*matrix ) {
-
- free( matrix->index );
-
- free( matrix );
-
-}
+ 
 
 typedef enum {
 
- REGULAR = 0,
+  REGULAR = 0,
 
- TRANSPOSE = 1
+  TRANSPOSE = 1
 
 } Transpose;
 
+ 
+
 // Allowing reading a matrix in as either regular or transposed
 
-Matrix\* read\_matrix( FILE \*input, Transpose orient ) {
+Matrix* read_matrix( FILE *input, Transpose orient ) {
 
- size\_t R, C;
+  size_t R, C;
 
- fscanf( input, "%zu %zu", &R, &C );
+  fscanf( input, "%zu %zu", &R, &C );
 
- Matrix \*matrix = NULL;
+ 
 
- if( orient == REGULAR ) {
+  Matrix *matrix = NULL;
 
- matrix = allocate\_matrix( R, C );
+ 
 
- for( size\_t r = 0; r \< matrix->R; ++r ) {
+  if( orient == REGULAR ) {
 
- for( size\_t c = 0; c \< matrix->C; ++c ) {
+    matrix = allocate_matrix( R, C );
 
- fscanf( input, "%d", &matrix->index\[c + r \* C\] );
+    for( size_t r = 0; r < matrix->R; ++r ) {
 
- }
+      for( size_t c = 0; c < matrix->C; ++c ) {
 
- }
+        fscanf( input, "%d", &matrix->index[c + r * C] );
 
- } else if( orient == TRANSPOSE ) {
+      }
 
- matrix = allocate\_matrix( C, R );
+    }
 
- for( size\_t r = 0; r \< matrix->C; ++r ) {
+  } else if( orient == TRANSPOSE ) {
 
- for( size\_t c = 0; c \< matrix->R; ++c ) {
+    matrix = allocate_matrix( C, R );
 
- fscanf( input, "%d", &matrix->index\[r + c \* R\] );
+    for( size_t r = 0; r < matrix->C; ++r ) {
 
- }
+      for( size_t c = 0; c < matrix->R; ++c ) {
 
- }
+        fscanf( input, "%d", &matrix->index[r + c * R] );
 
- } else {
+      }
 
- fprintf( stderr, "Error: unknown orientation %d.\\n", orient );
+    }
 
- exit( EXIT\_FAILURE );
+  } else {
 
- }
+    fprintf( stderr, "Error: unknown orientation %d.\n", orient );
 
- return matrix;
+    exit( EXIT_FAILURE );
 
-}
+  }
 
-void print\_matrix( FILE \*output, Matrix \*matrix ) {
+ 
 
- fprintf( output, "%zu %zu\\n", matrix->R, matrix->C );
-
- for( size\_t r = 0; r \< matrix->R; ++r ) {
-
- for( size\_t c = 0; c \< matrix->C - 1; ++c ) {
-
- fprintf( output, "%d ", matrix->index\[c + r \* matrix->C\] );
-
- }
-
- fprintf( output, "%d\\n", matrix->index\[matrix->C - 1 + r \* matrix->C\] );
-
- }
+  return matrix;
 
 }
 
-Matrix\* product\_matrix( Matrix \*a, Matrix \*b ) {
+ 
 
- if( a->C != b->C ) {
+void print_matrix( FILE *output, Matrix *matrix ) {
 
- printf( "Error: tried to multiply (%zux%zu)x(%zux%zu)\\n", a->R, a->C, b->C, b->R );
+  fprintf( output, "%zu %zu\n", matrix->R, matrix->C );
 
- exit( EXIT\_FAILURE );
+  for( size_t r = 0; r < matrix->R; ++r ) {
 
- }
+    for( size_t c = 0; c < matrix->C - 1; ++c ) {
 
- Matrix \*prod = allocate\_matrix( a->R, b->R );
+      fprintf( output, "%d ", matrix->index[c + r * matrix->C] );
 
- size\_t nRows = prod->R, nCols = prod->C, nInner = a->C;
+    }
 
- for( size\_t r = 0; r \< nRows; ++r ) {
+    fprintf( output, "%d\n", matrix->index[matrix->C - 1 + r * matrix->C] );
 
- for( size\_t c = 0; c \< nCols; ++c ) {
-
- prod->index\[c + r \* nCols\] = 0;
-
- for( size\_t i = 0; i \< nInner; ++i ) {
-
- prod->index\[c + r \* nCols\] += a->index\[i + r \* nInner\] \* b->index\[i + c \* nInner\];
-
- }
-
- }
-
- }
-
- return prod;
+  }
 
 }
+
+ 
+
+Matrix* product_matrix( Matrix *a, Matrix *b ) {
+
+  if( a->C != b->C ) {
+
+    printf( "Error: tried to multiply (%zux%zu)x(%zux%zu)\n", a->R, a->C, b->C, b->R );
+
+    exit( EXIT_FAILURE );
+
+  }
+
+ 
+
+  Matrix *prod = allocate_matrix( a->R, b->R );
+
+  size_t nRows = prod->R, nCols = prod->C, nInner = a->C;
+
+ 
+
+  for( size_t r = 0; r < nRows; ++r ) {
+
+    for( size_t c = 0; c < nCols; ++c ) {
+
+      prod->index[c + r * nCols] = 0;
+
+      for( size_t i = 0; i < nInner; ++i ) {
+
+        prod->index[c + r * nCols] += a->index[i + r * nInner] * b->index[i + c * nInner];
+
+      }
+
+    }
+
+  }
+
+ 
+
+  return prod;
+
+}
+
+ 
 
 int main(void) {
 
- FILE \*fin = fopen( "matrix2.in", "r" );
+  FILE *fin = fopen( "matrix2.in", "r" );
 
- if( fin == NULL ) {
+ 
 
- printf( "Error: could not open matrix2.in\\n" );
+  if( fin == NULL ) {
 
- exit( EXIT\_FAILURE );
+    printf( "Error: could not open matrix2.in\n" );
 
- }
+    exit( EXIT_FAILURE );
 
- Matrix \*a = read\_matrix( fin, REGULAR );
+  }
 
- Matrix \*b = read\_matrix( fin, TRANSPOSE );
+ 
 
- fclose( fin );
+  Matrix *a = read_matrix( fin, REGULAR );
 
- Matrix \*c = product\_matrix( a, b );
+  Matrix *b = read_matrix( fin, TRANSPOSE );
 
- FILE \*output = fopen( "matrix2.out", "w" );
+  fclose( fin );
 
- if( output == NULL ) {
+ 
 
- printf( "Error: could not open matrix2.out\\n" );
+  Matrix *c = product_matrix( a, b );
 
- exit( EXIT\_FAILURE );
+ 
 
- }
+  FILE *output = fopen( "matrix2.out", "w" );
 
- print\_matrix( output, c );
+ 
 
- fclose( output );
+  if( output == NULL ) {
 
- destroy\_matrix( a );
+    printf( "Error: could not open matrix2.out\n" );
 
- destroy\_matrix( b );
+    exit( EXIT_FAILURE );
 
- destroy\_matrix( c );
+  }
 
- return 0;
+ 
+
+  print_matrix( output, c );
+
+  fclose( output );
+
+ 
+
+  destroy_matrix( a );
+
+  destroy_matrix( b );
+
+  destroy_matrix( c );
+
+ 
+
+  return 0;
 
 }
+```
 
 Below is the output using the test data:
 
-**matrix2:**
+```plaintext
+matrix2:
+1: OK [0.006 seconds]
+2: OK [0.007 seconds]
+3: OK [0.007 seconds]
+4: OK [0.019 seconds]
+5: OK [0.017 seconds]
+6: OK [0.109 seconds]
+7: OK [0.178 seconds]
+8: OK [0.480 seconds]
+9: OK [0.791 seconds]
+10: OK [1.236 seconds]
+11: OK [2.088 seconds]
+```
 
- 1: OK \[0.006 seconds\]
-
- 2: OK \[0.007 seconds\]
-
- 3: OK \[0.007 seconds\]
-
- 4: OK \[0.019 seconds\]
-
- 5: OK \[0.017 seconds\]
-
- 6: OK \[0.109 seconds\]
-
- 7: OK \[0.178 seconds\]
-
- 8: OK \[0.480 seconds\]
-
- 9: OK \[0.791 seconds\]
-
-10: OK \[1.236 seconds\]
-
-11: OK \[2.088 seconds\]
-
-### « {{% resource_link 1330c237-1da9-2343-e1c5-e39e429984f3 "Back to Assignments" %}}
+### « {{% resource_link "1330c237-1da9-2343-e1c5-e39e429984f3" "Back to Assignments" %}}
