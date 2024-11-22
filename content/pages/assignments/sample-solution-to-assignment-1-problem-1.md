@@ -1,6 +1,7 @@
 ---
 content_type: page
 description: This section provides a sample solution to Assignment 1, Problem 1.
+draft: false
 learning_resource_types:
 - Assignments
 ocw_type: CourseSection
@@ -10,135 +11,154 @@ parent_uid: 1330c237-1da9-2343-e1c5-e39e429984f3
 title: Sample Solution to Assignment 1, Problem 1
 uid: 078c6a84-ee88-3afe-34f2-c31a5dcd5d65
 ---
+« {{% resource_link "1330c237-1da9-2343-e1c5-e39e429984f3" "Back to Assignments" %}}
 
-« {{% resource_link 1330c237-1da9-2343-e1c5-e39e429984f3 "Back to Assignments" %}}
-
-/\*
-
+```plaintext
+/*
 PROG: floating
 
 LANG: C
 
-\*/
+*/
 
-#include \<stdio.h>
+#include <stdio.h>
 
-#include \<stdlib.h>
+#include <stdlib.h>
 
-#include \<stdint.h>
+#include <stdint.h>
 
-#include \<math.h>
+#include <math.h>
 
-#define ABSOLUTE\_WIDTH 31
+ 
 
-#define MANTISSA\_WIDTH 23
+#define ABSOLUTE_WIDTH 31
 
-#define EXPONENT\_WIDTH 8
+#define MANTISSA_WIDTH 23
 
-#define EXPONENT\_MASK 0xffu
+#define EXPONENT_WIDTH 8
 
-#define MANTISSA\_MASK 0x007fffffu
+#define EXPONENT_MASK 0xffu
 
-#define EXPONENT\_BIAS 127
+#define MANTISSA_MASK 0x007fffffu
 
-union float\_bits {
+#define EXPONENT_BIAS 127
 
- float f;
+ 
 
- uint32\_t bits;
+union float_bits {
+
+  float f;
+
+  uint32_t bits;
 
 };
 
-void print\_float( FILE \*output, float f ) {
+ 
 
- union float\_bits t; t.f = f;
+void print_float( FILE *output, float f ) {
 
- uint32\_t sign\_bit = ( t.bits >> ABSOLUTE\_WIDTH );
+  union float_bits t; t.f = f;
 
- uint32\_t exponent = ( t.bits >> MANTISSA\_WIDTH ) & EXPONENT\_MASK;
+ 
 
- uint32\_t mantissa = ( t.bits  &  MANTISSA\_MASK );
+  uint32_t sign_bit = ( t.bits >> ABSOLUTE_WIDTH );
 
- if( sign\_bit != 0 ) {
+  uint32_t exponent = ( t.bits >> MANTISSA_WIDTH ) & EXPONENT_MASK;
 
- fprintf( output, "-" );
+  uint32_t mantissa = ( t.bits  &  MANTISSA_MASK );
 
- }
+ 
 
- if( exponent > 2 \* EXPONENT\_BIAS ) {
+  if( sign_bit != 0 ) {
 
- fprintf( output, "Inf\\n" ); /\* Infinity \*/
+    fprintf( output, "-" );
 
- return;
+  }
 
- } else if( exponent == 0 ) {
+ 
 
- fprintf( output, "0." ); /\* Zero or Denormal \*/
+  if( exponent > 2 * EXPONENT_BIAS ) {
 
- exponent = ( mantissa != 0 ) ? exponent + 1 : exponent;
+    fprintf( output, "Inf\n" ); /* Infinity */
 
- } else {
+    return;
 
- fprintf( output, "1." ); /\* Usual \*/
+  } else if( exponent == 0 ) {
 
- }
+    fprintf( output, "0." ); /* Zero or Denormal */
 
- for( int k = MANTISSA\_WIDTH - 1; k >= 0; --k ) {
+    exponent = ( mantissa != 0 ) ? exponent + 1 : exponent;
 
- fprintf( output, "%d", ( mantissa >> k ) & 1 );
+  } else {
 
- }
+    fprintf( output, "1." ); /* Usual */
 
- if( exponent != 0 || mantissa != 0 ) {
+  }
 
- fprintf( output, " \* 2^%d\\n", (int) ( exponent - EXPONENT\_BIAS ) );
+ 
 
- }
+  for( int k = MANTISSA_WIDTH - 1; k >= 0; --k ) {
+
+    fprintf( output, "%d", ( mantissa >> k ) & 1 );
+
+  }
+
+ 
+
+  if( exponent != 0 || mantissa != 0 ) {
+
+    fprintf( output, " * 2^%d\n", (int) ( exponent - EXPONENT_BIAS ) );
+
+  }
 
 }
+
+ 
 
 int main() {
 
- FILE \*input  = fopen( "floating.in",  "r" ),
+  FILE *input  = fopen( "floating.in",  "r" ),
 
- \*output = fopen( "floating.out", "w" );
+       *output = fopen( "floating.out", "w" );
 
- size\_t N; float f;
+ 
 
- fscanf( input, "%zu", &N );
+  size_t N; float f;
 
- for( size\_t i = 0; i \< N; ++i ) {
+  fscanf( input, "%zu", &N );
 
- fscanf( input, "%f", &f );
+ 
 
- print\_float( output, f );
+  for( size_t i = 0; i < N; ++i ) {
 
- }
+    fscanf( input, "%f", &f );
 
- fclose( input );
+    print_float( output, f );
 
- fclose( output );
+  }
 
- return 0;
+ 
+
+  fclose( input );
+
+  fclose( output );
+
+  return 0;
 
 }
+```
 
-_Below is the output using the test data:_
+*Below is the output using the test data:*
 
-**floating:**
+```plaintext
+floating:
+1: OK [0.004 seconds] OK!
+2: OK [0.004 seconds] OK!
+3: OK [0.004 seconds] OK!
+4: OK [0.004 seconds] OK!
+5: OK [0.005 seconds] OK!
+6: OK [0.004 seconds] OK!
+7: OK [0.004 seconds] OK!
+```
 
- 1: OK \[0.004 seconds\] OK!
-
- 2: OK \[0.004 seconds\] OK!
-
- 3: OK \[0.004 seconds\] OK!
-
- 4: OK \[0.004 seconds\] OK!
-
- 5: OK \[0.005 seconds\] OK!
-
- 6: OK \[0.004 seconds\] OK!
-
- 7: OK \[0.004 seconds\] OK!
-
-### « {{% resource_link 1330c237-1da9-2343-e1c5-e39e429984f3 "Back to Assignments" %}}
+### «

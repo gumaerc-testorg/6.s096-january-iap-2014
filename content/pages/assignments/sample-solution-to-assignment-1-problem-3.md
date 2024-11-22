@@ -1,6 +1,7 @@
 ---
 content_type: page
 description: 'This section provides a sample solution to Assignment 1, Problem 3.  '
+draft: false
 learning_resource_types:
 - Assignments
 ocw_type: CourseSection
@@ -10,169 +11,266 @@ parent_uid: 1330c237-1da9-2343-e1c5-e39e429984f3
 title: Sample Solution to Assignment 1, Problem 3
 uid: 91b98c31-93e8-a0ed-1427-bfc4b4f3bd48
 ---
+« {{% resource_link "1330c237-1da9-2343-e1c5-e39e429984f3" "Back to Assignments" %}}
 
-« {{% resource_link 1330c237-1da9-2343-e1c5-e39e429984f3 "Back to Assignments" %}}
-
-/\*
-
-PROG: matrix
+```plaintext
+/*
+PROG: matrix2
 
 LANG: C
 
-\*/
+*/
 
-#include \<stdio.h>
+#include <stdio.h>
 
-#include \<stdlib.h>
+#include <stdlib.h>
 
-#define MAXN 300
+#include <string.h>
 
-typedef struct Matrix {
 
- size\_t R, C;
 
- int index\[MAXN\]\[MAXN\];
+typedef struct Matrix_s {
+
+  size_t R, C;
+
+  int *index;
 
 } Matrix;
 
-void read\_matrix( FILE \*fin, Matrix \*matrix ) {
 
- fscanf( fin, "%zu %zu", &matrix->R, &matrix->C );
 
- if( matrix->R >= MAXN || matrix->C >= MAXN ) {
+Matrix* allocate_matrix( size_t R, size_t C ) {
 
- printf( "Error: tried to read matrix with a dimension larger than %d\\n", MAXN );
+  Matrix *matrix = malloc( sizeof( Matrix ) );
 
- exit( EXIT\_FAILURE );
+  matrix->R = R;
 
- }
+  matrix->C = C;
 
- for( size\_t r = 0; r \< matrix->R; ++r ) {
+  matrix->index = malloc( R * C * sizeof( int ) );
 
- for( size\_t c = 0; c \< matrix->C; ++c ) {
-
- fscanf( fin, "%d", &matrix->index\[r\]\[c\] );
-
- }
-
- }
+  return matrix;
 
 }
 
-void print\_matrix( FILE \*fout, Matrix \*matrix ) {
 
- fprintf( fout, "%zu %zu\\n", matrix->R, matrix->C );
 
- for( size\_t r = 0; r \< matrix->R; ++r ) {
+void destroy_matrix( Matrix *matrix ) {
 
- for( size\_t c = 0; c \< matrix->C - 1; ++c ) {
+  free( matrix->index );
 
- fprintf( fout, "%d ", matrix->index\[r\]\[c\] );
-
- }
-
- fprintf( fout, "%d\\n", matrix->index\[r\]\[matrix->C - 1\] );
-
- }
+  free( matrix );
 
 }
 
-void mult\_matrix( Matrix \*a, Matrix \*b, Matrix \*prod ) {
 
- if( a->C != b->R ) {
 
- printf( "Error: tried to multiply (%zux%zu)x(%zux%zu)\\n", a->R, a->C, b->R, b->C );
+typedef enum {
 
- exit( EXIT\_FAILURE );
+  REGULAR = 0,
 
- }
+  TRANSPOSE = 1
 
- size\_t inner = a->C;
+} Transpose;
 
- prod->R = a->R;
 
- prod->C = b->C;
 
- for( size\_t r = 0; r \< prod->R; ++r ) {
+// Allowing reading a matrix in as either regular or transposed
 
- for( size\_t c = 0; c \< prod->C; ++c ) {
+Matrix* read_matrix( FILE *input, Transpose orient ) {
 
- prod->index\[r\]\[c\] = 0;
+  size_t R, C;
 
- for( size\_t i = 0; i \< inner; ++i ) {
+  fscanf( input, "%zu %zu", &R, &C );
 
- prod->index\[r\]\[c\] += a->index\[r\]\[i\] \* b->index\[i\]\[c\];
 
- }
 
- }
+  Matrix *matrix = NULL;
 
- }
+
+
+  if( orient == REGULAR ) {
+
+    matrix = allocate_matrix( R, C );
+
+    for( size_t r = 0; r < matrix->R; ++r ) {
+
+      for( size_t c = 0; c < matrix->C; ++c ) {
+
+        fscanf( input, "%d", &matrix->index[c + r * C] );
+
+      }
+
+    }
+
+  } else if( orient == TRANSPOSE ) {
+
+    matrix = allocate_matrix( C, R );
+
+    for( size_t r = 0; r < matrix->C; ++r ) {
+
+      for( size_t c = 0; c < matrix->R; ++c ) {
+
+        fscanf( input, "%d", &matrix->index[r + c * R] );
+
+      }
+
+    }
+
+  } else {
+
+    fprintf( stderr, "Error: unknown orientation %d.\n", orient );
+
+    exit( EXIT_FAILURE );
+
+  }
+
+
+
+  return matrix;
 
 }
+
+
+
+void print_matrix( FILE *output, Matrix *matrix ) {
+
+  fprintf( output, "%zu %zu\n", matrix->R, matrix->C );
+
+  for( size_t r = 0; r < matrix->R; ++r ) {
+
+    for( size_t c = 0; c < matrix->C - 1; ++c ) {
+
+      fprintf( output, "%d ", matrix->index[c + r * matrix->C] );
+
+    }
+
+    fprintf( output, "%d\n", matrix->index[matrix->C - 1 + r * matrix->C] );
+
+  }
+
+}
+
+
+
+Matrix* product_matrix( Matrix *a, Matrix *b ) {
+
+  if( a->C != b->C ) {
+
+    printf( "Error: tried to multiply (%zux%zu)x(%zux%zu)\n", a->R, a->C, b->C, b->R );
+
+    exit( EXIT_FAILURE );
+
+  }
+
+
+
+  Matrix *prod = allocate_matrix( a->R, b->R );
+
+  size_t nRows = prod->R, nCols = prod->C, nInner = a->C;
+
+
+
+  for( size_t r = 0; r < nRows; ++r ) {
+
+    for( size_t c = 0; c < nCols; ++c ) {
+
+      prod->index[c + r * nCols] = 0;
+
+      for( size_t i = 0; i < nInner; ++i ) {
+
+        prod->index[c + r * nCols] += a->index[i + r * nInner] * b->index[i + c * nInner];
+
+      }
+
+    }
+
+  }
+
+
+
+  return prod;
+
+}
+
+
 
 int main(void) {
 
- FILE \*fin = fopen( "matrix.in", "r" ),
+  FILE *fin = fopen( "matrix2.in", "r" );
 
- \*fout = fopen( "matrix.out", "w" );
 
- if( fin == NULL ) {
 
- printf( "Error: could not open matrix.in\\n" );
+  if( fin == NULL ) {
 
- exit( EXIT\_FAILURE );
+    printf( "Error: could not open matrix2.in\n" );
 
- }
+    exit( EXIT_FAILURE );
 
- if( fin == NULL ) {
+  }
 
- printf( "Error: could not open matrix.out\\n" );
 
- exit( EXIT\_FAILURE );
 
- }
+  Matrix *a = read_matrix( fin, REGULAR );
 
- Matrix a, b, c;
+  Matrix *b = read_matrix( fin, TRANSPOSE );
 
- read\_matrix( fin, &a );
+  fclose( fin );
 
- read\_matrix( fin, &b );
 
- fclose( fin );
 
- mult\_matrix( &a, &b, &c );
+  Matrix *c = product_matrix( a, b );
 
- print\_matrix( fout, &c );
 
- fclose( fout );
 
- return 0;
+  FILE *output = fopen( "matrix2.out", "w" );
+
+
+
+  if( output == NULL ) {
+
+    printf( "Error: could not open matrix2.out\n" );
+
+    exit( EXIT_FAILURE );
+
+  }
+
+
+
+  print_matrix( output, c );
+
+  fclose( output );
+
+
+
+  destroy_matrix( a );
+
+  destroy_matrix( b );
+
+  destroy_matrix( c );
+
+
+
+  return 0;
 
 }
+```
 
 Below is the output using the test data:
 
-**matrix:**
+```plaintext
+matrix2:
+1: OK [0.006 seconds]
+2: OK [0.007 seconds]
+3: OK [0.007 seconds]
+4: OK [0.019 seconds]
+5: OK [0.017 seconds]
+6: OK [0.109 seconds]
+7: OK [0.178 seconds]
+8: OK [0.480 seconds]
+9: OK [0.791 seconds]
+10: OK [1.236 seconds]
+11: OK [2.088 seconds]
+```
 
- 1: OK \[0.004 seconds\]
-
- 2: OK \[0.004 seconds\]
-
- 3: OK \[0.004 seconds\]
-
- 4: OK \[0.013 seconds\]
-
- 5: OK \[0.009 seconds\]
-
- 6: OK \[0.006 seconds\]
-
- 7: OK \[0.011 seconds\]
-
- 8: OK \[0.011 seconds\]
-
- 9: OK \[0.012 seconds\]
-
-10: OK \[0.004 seconds\]
-
-### « {{% resource_link 1330c237-1da9-2343-e1c5-e39e429984f3 "Back to Assignments" %}}
+### « {{% resource_link "1330c237-1da9-2343-e1c5-e39e429984f3" "Back to Assignments" %}}
