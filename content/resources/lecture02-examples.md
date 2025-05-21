@@ -1,7 +1,7 @@
 ---
 content_type: resource
 description: This is a special file that contains information regarding lecture 2.
-file: /ol-ocw-studio-app/courses/6-s096-effective-programming-in-c-and-c-january-iap-2014/db4460b240cd15152bc0f62f45b2e883_lecture02-examples.zip
+file: /courses/6-s096-effective-programming-in-c-and-c-january-iap-2014/db4460b240cd15152bc0f62f45b2e883_lecture02-examples.zip
 file_size: 3102
 file_type: application/zip
 learning_resource_types:
