@@ -2,7 +2,7 @@
 content_type: resource
 description: This is a supporting file that contains information regarding C++ linked
   list library.
-file: /ol-ocw-studio-app/courses/6-s096-effective-programming-in-c-and-c-january-iap-2014/dba8ad5c7057b38c2e936024bc2f2add_cpplist.zip
+file: /courses/6-s096-effective-programming-in-c-and-c-january-iap-2014/dba8ad5c7057b38c2e936024bc2f2add_cpplist.zip
 file_size: 6043
 file_type: application/zip
 learning_resource_types:

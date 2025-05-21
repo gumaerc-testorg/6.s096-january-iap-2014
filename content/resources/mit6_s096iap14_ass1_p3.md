@@ -2,7 +2,7 @@
 content_type: resource
 description: This resource file contains information regarding matrix manipulation
   2.
-file: /ol-ocw-studio-app/courses/6-s096-effective-programming-in-c-and-c-january-iap-2014/cda27b4badd6e569bd0f99cd69e341e7_MIT6_S096IAP14_ass1_p3.pdf
+file: /courses/6-s096-effective-programming-in-c-and-c-january-iap-2014/cda27b4badd6e569bd0f99cd69e341e7_MIT6_S096IAP14_ass1_p3.pdf
 file_size: 303717
 file_type: application/pdf
 learning_resource_types:
