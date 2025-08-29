@@ -1,7 +1,7 @@
 ---
 content_type: resource
 description: This is a special file related to lecture 8 and 9.
-file: /courses/6-s096-effective-programming-in-c-and-c-january-iap-2014/ae55af63c7af7cc76e0c4253177af878_Vector3.h
+file: /ol-ocw-studio-app/courses/6-s096-effective-programming-in-c-and-c-january-iap-2014/ae55af63c7af7cc76e0c4253177af878_Vector3.h
 file_size: 2372
 file_type: text/x-chdr
 learning_resource_types:
