@@ -31,7 +31,7 @@ Save the above code as "Makefile" in the directory where you are compiling your 
 
 _Setting up a Local Environment_
 
-*   **Windows:** The best way to get your local gcc toolchain is with [Cygwin](http://cygwin.org/). Make sure to select the 'gcc-core', 'gcc-g++', 'gdb', and 'make' packages during installation. If you would like to learn with an IDE, we recommend obtaining [Visual Studio Professional 2013](https://www.visualstudio.com/vs/professional/), which is available for free if you are a student. However, you'll still need to make sure your code compiles on gcc/g++ since that what the assignment submission system uses.
+*   **Windows:** The best way to get your local gcc toolchain is with {{% resource_link "e5e827e5-1066-4688-84e8-393a1cd9559c" "Cygwin" %}}. Make sure to select the 'gcc-core', 'gcc-g++', 'gdb', and 'make' packages during installation. If you would like to learn with an IDE, we recommend obtaining {{% resource_link "e6b592eb-e335-439f-83b9-145ba52c4c49" "Visual Studio Professional 2013" %}}, which is available for free if you are a student. However, you'll still need to make sure your code compiles on gcc/g++ since that what the assignment submission system uses.
 *   **OS X:** Open Xcode, go to Preferences > Downloads > Components and download "Command Line Tools".
 *   **Linux:** Just install the listed tools via your usual package manager, if you don't already have them.
 
@@ -50,14 +50,14 @@ _General Important Points_
 
 _Classes in C++_
 
-*   **Follow the [rule of three](http://en.wikipedia.org/wiki/Rule_of_three_%28C%2B%2B_programming%29).** If your class needs a non-trivial destructor, you should also either implement or disable the copy constructor and copy assignment operators. (Furthermore, if you want your data to have the ability to be moved cheaply, also define the move constructor and move assignment.)
+*   **Follow the {{% resource_link "c327a6c9-7575-4a41-9335-ede6bc11817c" "rule of three" %}}.** If your class needs a non-trivial destructor, you should also either implement or disable the copy constructor and copy assignment operators. (Furthermore, if you want your data to have the ability to be moved cheaply, also define the move constructor and move assignment.)
 *   **Don't use global data.** Instead, encapsulate it in a class and design your interfaces effectively.
 *   **Use the constructor initializer list.**
 
 _Other_
 
 *   **Prefer using** `nullptr` **to** `NULL`**.**
-*   **Prefer using** `auto` **as long as it helps clarity.** For example, `auto dirPtr = Directory::create( "home" );` is probably better than declaring the type of `dirPtr`. Refer to [Herb Sutter's post on using auto](http://herbsutter.com/2013/08/12/gotw-94-solution-aaa-style-almost-always-auto/).
+*   **Prefer using** `auto` **as long as it helps clarity.** For example, `auto dirPtr = Directory::create( "home" );` is probably better than declaring the type of `dirPtr`. Refer to {{% resource_link "6fd75de0-b6a7-4a12-8626-8e8abce948f4" "Herb Sutter's post on using auto" %}}.
 *   **Prefer uniform initialization syntax.** You should be constructing objects with curly braces whenever possible, like so: `auto someObj = SomeObject{};`.
 *   **Associate asterisks and ampersands with the variable name, not data type.** Declare your pointers like `int *a, *b;`and references like `int &foo = other;`.
 *   **Do take advantage of the standard library.** Generally don't try to rewrite data structures and algorithms that have already been implemented well in the standard library unless you have a good reason.
