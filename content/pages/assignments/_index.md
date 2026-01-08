@@ -38,7 +38,7 @@ Test data: {{% resource_link "05219d18-9919-0bfe-23d4-8f4196722155" "matrix.data
 {{% resource_link "91b98c31-93e8-a0ed-1427-bfc4b4f3bd48" "Sample Solution to Assignment 1, Problem 3" %}}
 
 {{< tdclose >}}{{< tdopen >}}
-Test data: [matrix2.data (ZIP - 20.7MB)](https://ocw-studio.odl.mit.edu/ans7870/6/6.S096/iap14/matrix2.data.zip) (This ZIP file contains: 11 .in files and 11 .out files.)
+Test data: {{% resource_link "94392bbe-76d8-4683-8efc-300555673d7d" "matrix2.data (ZIP - 20.7MB)" %}} (This ZIP file contains: 11 .in files and 11 .out files.)
 {{< tdclose >}}{{< trclose >}}{{< tropen >}}{{< tdopen >}}
 
 {{% resource_link "b6540acf-ffa8-46db-e307-a191ad07cd81" "Problem 4: Transposition Cipher (PDF)" %}}
@@ -46,7 +46,7 @@ Test data: [matrix2.data (ZIP - 20.7MB)](https://ocw-studio.odl.mit.edu/ans7870/
 No sample solution available.
 
 {{< tdclose >}}{{< tdopen >}}
-Test data: [loop.data (ZIP - 19.1MB)](https://ocw-studio.odl.mit.edu/ans7870/6/6.S096/iap14/loop.data.zip) (This ZIP file contains: 10 .in files and 10 .out files.)
+Test data: {{% resource_link "65284412-ac1d-4874-ad8f-830331561404" "loop.data (ZIP - 19.1MB)" %}} (This ZIP file contains: 10 .in files and 10 .out files.)
 {{< tdclose >}}{{< trclose >}}{{< tropen >}}{{< tdopen colspan="2" >}}
 **Assignment 2**
 {{< tdclose >}}{{< trclose >}}{{< tropen >}}{{< tdopen >}}
